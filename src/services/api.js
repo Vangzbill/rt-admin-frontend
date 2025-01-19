@@ -14,7 +14,6 @@ export const penghuniAPI = {
   getById: (id) => api.get(`/penghunis/${id}`),
   create: (data) => api.post('/penghunis', data),
   update: (id, data) => api.put(`/penghunis/${id}`, data),
-  delete: (id) => api.delete(`/penghunis/${id}`),
 };
 
 export const rumahAPI = {
@@ -22,7 +21,6 @@ export const rumahAPI = {
   getById: (id) => api.get(`/rumahs/${id}`),
   create: (data) => api.post('/rumahs', data),
   update: (id, data) => api.put(`/rumahs/${id}`, data),
-  delete: (id) => api.delete(`/rumahs/${id}`),
   getHistory: (id) => api.get(`/rumahs/${id}/history`),
 };
 
@@ -32,14 +30,10 @@ export const penghuniRumahAPI = {
 };
 
 export const pembayaranAPI = {
+  getAll: () => api.get('/pembayarans'),
   create: (data) => api.post('/pembayarans', data),
   getHistoryByRumah: (penghuniRumahId) => 
     api.get(`/pembayarans/rumah/${penghuniRumahId}`),
-};
-
-export const pengeluaranAPI = {
-  getAll: () => api.get('/pengeluarans'),
-  create: (data) => api.post('/pengeluarans', data),
 };
 
 export const laporanAPI = {
